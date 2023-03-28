@@ -5,6 +5,7 @@ import axios from "axios";
 import "./Shop.css";
 
 import Product from "../Product/Product";
+import Cart from "../Card/Cart";
 const Shop = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -31,29 +32,7 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart-container">
-        <h2>Order summary</h2>
-        <p>Selected items: {cart.length}</p>
-        {/* <p>
-          Total price:{" "}
-          {cart.reduce((total, c) => total + c.price, 0).toFixed(2)}
-        </p>
-        <p>
-          Shipping :{" "}
-          {cart.reduce((total, c) => total + c.shipping, 0).toFixed(2)}
-        </p>
-        <p>
-          Tax (10%):{" "}
-          {(
-            cart.reduce((total, c) => total + c.price + c.shipping, 0) * 0.1
-          ).toFixed(2)}
-        </p>
-        <p>
-          Grand Total:{" "}
-          {(
-            cart.reduce((total, c) => total + c.price + c.shipping, 0) * 1.1
-          ).toFixed(2)}
-        </p> */}
-
+       <Cart cart={cart}/>
       </div>
     </div>
   );
