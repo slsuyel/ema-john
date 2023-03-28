@@ -1,13 +1,19 @@
 import React from "react";
 import "./Cart.css";
 const Cart = ({ cart }) => {
-  //   const cart = props.cart;
-  console.log(cart);
+  // console.log(cart);
   let total = 0;
   let shipping = 0;
+  let quantity = 0;
   for (const product of cart) {
-    total = total + product.price;
+    // product.quantity = product.quantity || 1
+    if (product.quantity === 0) {
+      product.quantity = 1;
+    }
+
+    total = total + product.price * product.quantity;
     shipping = shipping + product.shipping;
+    quantity = quantity + product.quantity;
   }
   const tax = total * 0.07; // 7% tax on total
 
@@ -16,7 +22,7 @@ const Cart = ({ cart }) => {
   return (
     <div className="cart">
       <h2>Order summary</h2>
-      <p>Selected items: {cart.length}</p>
+      <p>Selected items: {quantity}</p>
       <p>Total price:{total.toFixed(2)}</p>
       <p>Total Shipping Charge: ${shipping}</p>
       <p>Tax: ${tax.toFixed(2)}</p>
