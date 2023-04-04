@@ -1,0 +1,28 @@
+.reveiwItem {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(145, 137, 137);
+    margin: 7px;
+    width: 496px;
+    padding: 8px;
+    border-radius: 5px;
+    position: relative;
+}
+.items{
+    margin-left: 15px;
+}
+.delete-btn {
+    position: absolute;
+    right: 20px;
+    border: 0;
+    background: #ff000000;
+
+}
+.delete {
+    color: red;
+    /* border: 1px solid red; */
+    padding: 8px;
+    border-radius: 23px;
+    background: #ff000038;
+    cursor: pointer;
+}

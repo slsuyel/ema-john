@@ -1,4 +1,5 @@
 import React from "react";
+import { removeFromDb } from "../../utilities/fakedb";
 import "./Cart.css";
 const Cart = ({ cart }) => {
   // console.log(cart);
@@ -10,7 +11,6 @@ const Cart = ({ cart }) => {
     if (product.quantity === 0) {
       product.quantity = 1;
     }
-
     total = total + product.price * product.quantity;
     shipping = shipping + product.shipping;
     quantity = quantity + product.quantity;
@@ -27,8 +27,15 @@ const Cart = ({ cart }) => {
       <p>Total Shipping Charge: ${shipping}</p>
       <p>Tax: ${tax.toFixed(2)}</p>
       <h6>Grand Total: ${grandTotal.toFixed(2)}</h6>
+  
     </div>
   );
 };
+
+function clearLocal() {
+  localStorage.clear();
+  console.log("Local storage cleared.");
+  window.location.reload();
+}
 
 export default Cart;

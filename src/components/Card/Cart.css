@@ -12,3 +12,17 @@
 .cart h6 {
   font-size: 21px;
 }
+.removeBtn{
+  padding: 7px;
+    margin-top: 8px;
+    background: rebeccapurple;
+    border-radius: 6px;
+    color: aliceblue;
+}
+.removeBtn:hover {
+  background-color: rgba(102, 51, 153, 0.789);
+}
+.button-remove-buy{
+  display: flex;
+  justify-content: space-between;
+}
