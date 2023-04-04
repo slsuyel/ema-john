@@ -39,9 +39,13 @@
   position: absolute;
   bottom: 0;
   height: 39px;
+  color: #0e161a;
+  font-weight: 600;
+  transition: 0.3s;
 }
 
 .btn-add-cart:hover{
     background-color: orange;
     cursor: pointer;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 }

@@ -26,3 +26,21 @@
   display: flex;
   justify-content: space-between;
 }
+.Clear-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #d20e0e82;
+  border: 0;
+  border-radius: 7px;
+  padding: 5px;
+  color: white;
+  width: 100%;
+  margin-top: 11px;
+  gap: 10px;
+  text-decoration: none;
+}
+.Clear-btn:hover{
+  background: #d20e0ebb;
+  cursor: pointer;
+}
